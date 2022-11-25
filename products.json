@@ -6,7 +6,7 @@
         "originalPrice" : 1500,
         "resalePrice" : 1200,
         "condition" : "good",
-        "image" : "https://i0.wp.com/dazzle.com.bd/wp-content/uploads/2021/09/iphone-13-pro-max-silver-min.png?fit=600%2C600&ssl=1",
+        "image" : "https://github.com/maruf21hossain/bikroy-bazar-image/blob/main/iphone-13-pro-max.png?raw=true",
         "used" : 11,
         "sellerName" : "Anik Chowdhury",
         "description" : "This is very good phone, Everything all okay"
@@ -18,7 +18,7 @@
         "originalPrice" : 1300,
         "resalePrice" : 960,
         "condition" : "good",
-        "image" : "https://i0.wp.com/dazzle.com.bd/wp-content/uploads/2021/09/iphone-13-pro-max-silver-min.png?fit=600%2C600&ssl=1",
+        "image" : "https://github.com/maruf21hossain/bikroy-bazar-image/blob/main/iphone-12.jpg?raw=true",
         "used" : 16,
         "sellerName" : "Rohim Chowdhury",
         "description" : "This is very good phone, Everything all okay"
@@ -30,7 +30,7 @@
         "originalPrice" : 1700,
         "resalePrice" : 1450,
         "condition" : "good",
-        "image" : "https://i0.wp.com/dazzle.com.bd/wp-content/uploads/2021/09/iphone-13-pro-max-silver-min.png?fit=600%2C600&ssl=1",
+        "image" : "https://github.com/maruf21hossain/bikroy-bazar-image/blob/main/Samsung%20S22%20Ultra.jpg?raw=true",
         "used" : 6,
         "sellerName" : "Shakib Chowdhury",
         "description" : "This is very good phone, Everything all okay"
@@ -42,8 +42,8 @@
         "originalPrice" : 1800,
         "resalePrice" : 1650,
         "condition" : "good",
-        "image" : "https://i0.wp.com/dazzle.com.bd/wp-content/uploads/2021/09/iphone-13-pro-max-silver-min.png?fit=600%2C600&ssl=1",
-        "used" : 6,
+        "image" : "https://github.com/maruf21hossain/bikroy-bazar-image/blob/main/Samsung%20z%20fold%203.png?raw=true",
+        "used" : 4,
         "sellerName" : "Anayet Chowdhury",
         "description" : "This is very good phone, Everything all okay"
     },
@@ -54,8 +54,8 @@
         "originalPrice" : 1900,
         "resalePrice" : 1750,
         "condition" : "good",
-        "image" : "https://i0.wp.com/dazzle.com.bd/wp-content/uploads/2021/09/iphone-13-pro-max-silver-min.png?fit=600%2C600&ssl=1",
-        "used" : 6,
+        "image" : "https://github.com/maruf21hossain/bikroy-bazar-image/blob/main/Samsung%20z%20fold%203.png?raw=true",
+        "used" : 9,
         "sellerName" : "Kuddus Ali",
         "description" : "This is very good phone, Everything all okay"
     }
