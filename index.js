@@ -50,10 +50,14 @@ async function run() {
 
         app.get('/category/:id', async (req, res) => {
             const id = req.params.id;
-            const query = { _id: ObjectId(id) }
-            const result = await CategoriesCollection.findOne(query);
+            // console.log(id);
+            const query = { categoryId: id }
+            // console.log(query);
+            const result = await productsCollection.find(query).toArray();
+            console.log(result);
             res.send(result)
         })
+
 
         app.post('/products', async (req, res) => {
             const product = req.body;
@@ -73,6 +77,8 @@ async function run() {
             const product = await productsCollection.findOne(query)
             res.send(product);
         })
+
+
 
         app.get('/jwt', async (req, res) => {
             const email = req.query.email;
@@ -107,10 +113,10 @@ async function run() {
 
         app.put('/users/admin/:id', verifyJWT, async (req, res) => {
             const decodedEmail = req.decoded.email;
-            const query = { email : decodedEmail};
+            const query = { email: decodedEmail };
             const user = await usersCollection.findOne(query);
-            if(user?.role !== 'admin'){
-                return res.status(403).send({ message: 'forbidden access'})
+            if (user?.role !== 'admin') {
+                return res.status(403).send({ message: 'forbidden access' })
             }
 
             const id = req.params.id;
@@ -127,14 +133,33 @@ async function run() {
 
 
 
-        app.get('/users/seller/:email', async (req, res) => {
-            const email = req.params.email;
-            const query = { email }
-            const user = await usersCollection.findOne(query);
-            res.send({ isSeller: user?.role === 'seller' });
+        // app.get('/users/seller/:email', async (req, res) => {
+        //     const email = req.params.email;
+        //     const query = { email }
+        //     const user = await usersCollection.findOne(query);
+        //     res.send({ isSeller: user?.role === 'seller' });
+        // })
+
+        app.get('/user/seller', async (req, res) => {
+            const result = await usersCollection.find({ role: 'Seller' }).toArray();
+            res.send(result)
         })
 
-        app.put('/user/seller/:id', async(req, res) =>{
+        app.delete('/user/seller/:id', async(req, res) =>{
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id)};
+            console.log(filter);
+            const result = await usersCollection.deleteOne(filter);
+            console.log(result);
+            res.send(result)
+        })
+
+        app.get('/user/buyer', async (req, res) => {
+            const result = await usersCollection.find({ role: 'Buyer' }).toArray();
+            res.send(result)
+        })
+
+        app.put('/user/seller/:id', async (req, res) => {
             const id = req.params.id;
             const filter = { _id: ObjectId(id) }
             const options = { upsert: true };

@@ -1,14 +1,18 @@
 [
     {
+        "categoryId" : 1,
         "categoryName" : "Iphone"
     },
     {
+        "categoryId" : 2,
         "categoryName" : "Samsung"
     },
     {
+        "categoryId" : 3,
         "categoryName" : "Xiaomi"
     },
     {
+        "categoryId" : 4,
         "categoryName" : "Realme"
     }
 ]
