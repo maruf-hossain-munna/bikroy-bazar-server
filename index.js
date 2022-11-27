@@ -40,6 +40,7 @@ async function run() {
         const CategoriesCollection = client.db("bikroyBazar").collection("categories");
         const productsCollection = client.db("bikroyBazar").collection("products");
         const usersCollection = client.db("bikroyBazar").collection("users");
+        const bookingProductCollection = client.db("bikroyBazar").collection("bookingProducts");
 
         app.get('/categories', async (req, res) => {
             const query = {};
@@ -50,12 +51,23 @@ async function run() {
 
         app.get('/category/:id', async (req, res) => {
             const id = req.params.id;
-            // console.log(id);
             const query = { categoryId: id }
-            // console.log(query);
             const result = await productsCollection.find(query).toArray();
-            console.log(result);
+            // console.log(result);
             res.send(result)
+        })
+
+        app.post('/bookingProducts', async(req, res) =>{
+            const bookingProduct = req.body;
+            console.log(bookingProduct)
+            const result = await bookingProductCollection.insertOne(bookingProduct);
+            res.send(result)
+        })
+
+        app.get('/bookingProducts', async(req, res) =>{
+            const query = {};
+            const bookingProduct = await bookingProductCollection.find(query).toArray();
+            res.send(bookingProduct)
         })
 
 
